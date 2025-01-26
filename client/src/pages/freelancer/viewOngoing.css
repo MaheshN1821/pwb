@@ -1,0 +1,273 @@
+.ongoing-track-container {
+  width: 100%;
+  height: fit-content;
+  /* border: 1px solid;
+  margin: 10px;
+  padding: 10px; */
+}
+
+.ongoing-contents {
+  border: 1px solid;
+  border-top: none;
+  /* margin: 5px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.on-sl {
+  width: 10%;
+  text-align: center;
+  place-content: center;
+  border-right: 1px solid;
+  padding: 8px;
+  height: 100px;
+}
+
+.on-pt {
+  width: 35%;
+  place-content: center;
+  height: 100px;
+  text-align: center;
+  border-right: 1px solid;
+  padding: 8px;
+}
+
+.on-sn {
+  width: 20%;
+  place-content: center;
+  height: 100px;
+  text-align: center;
+  border-right: 1px solid;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.on-a {
+  width: 25%;
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.on-chat {
+  /* border: 1px solid; */
+  padding: 2px 10px;
+  background-color: rgb(21, 190, 190);
+  color: white;
+  cursor: pointer;
+  margin: 6px 20px;
+}
+
+.on-delete {
+  padding: 2px 8px;
+  margin: 6px 20px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.87);
+}
+
+.on-complete {
+  /* margin: 6px 20px; */
+  padding: 2px 8px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(24, 190, 24);
+}
+
+.on-a span:not(:hover) {
+  transform: scale(1);
+}
+
+.on-a span:hover {
+  transform: scale(1.1);
+}
+
+.ongoing-chat {
+  border: 1px solid;
+  border-top: none;
+  /* margin: 10px; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-points {
+  cursor: pointer;
+  padding: 2px 8px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(124, 24, 190);
+  /* margin: 6px 10px; */
+}
+
+.key-points-1 {
+  border: 1px solid;
+  border-top: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+
+.add-note {
+  cursor: pointer;
+  /* padding: 2px 8px; */
+  padding: 4px 14px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 10px;
+  place-content: center;
+  background-color: rgb(24, 35, 190);
+}
+
+.display-note {
+  cursor: pointer;
+  /* padding: 2px 8px; */
+  padding: 4px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  font-size: 1.3rem;
+  background-color: orange;
+  place-content: center;
+}
+
+.adding-notes {
+  border: 1px solid;
+  border-top: none;
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.adding-notes-input {
+  width: 60%;
+}
+
+.adding-notes label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 10px;
+}
+
+.adding-notes textarea {
+  width: 89%;
+  height: 140px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid;
+  font-size: 1.1rem;
+}
+
+.adding-notes textarea:focus {
+  outline: none;
+}
+
+.notes-saving-btn {
+  text-align: center;
+  /* border: 1px solid; */
+  width: 30%;
+  font-size: 1.4rem;
+  padding: 6px 0px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.795);
+}
+
+.notes-saving-btn:hover {
+  background-color: rgba(128, 128, 128, 0.459);
+  color: black;
+}
+
+.note-dis {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-top: none;
+  padding: 10px;
+}
+
+.note-rendering {
+  border: 1px solid;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.progress {
+  padding: 6px 14px 4px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  font-size: 1.3rem;
+  background-color: rgba(255, 166, 0, 0.945);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress input {
+  margin: 1px 10px 1px 10px;
+  border: 1px solid;
+  padding: 2px 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 50px;
+}
+
+.progress input:focus {
+  outline: none;
+}
+
+.p-up {
+  border: 1px solid;
+  padding: 2px 8px;
+  background-color: white;
+  color: orange;
+}
+
+.p-up:hover {
+  background-color: rgba(255, 255, 255, 0.801);
+  color: black;
+}
+
+.stud-info-display {
+  border: 1px solid;
+  border-top: none;
+  padding: 16px;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+
+.stud-pn {
+  margin: 2px 16px 2px 2px;
+  font-weight: 500;
+}
+
+.stud-em {
+  font-weight: 500;
+  margin: 2px 2px 2px 16px;
+}
