@@ -50,9 +50,9 @@ app.use("/freelancer", handleFreelancerInformation);
 app.use("/request", handleRequest);
 app.use("/notify", handleNotification);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello World");
+// });
 
 const PORT = process.env.PORT || 3300;
 
@@ -114,13 +114,11 @@ io.on("connection", (socket) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, "/client/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-  });
-}
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 mongoose
   .connect(process.env.MONGO_URL)
