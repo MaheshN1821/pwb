@@ -15,7 +15,7 @@ const handleStudentPayment = async (req, res) => {
       merchantUserId: req.body.MUID,
       name: req.body.name,
       amount: req.body.amount * 100,
-      redirectUrl: `https://projects-work-board.vercel.app/payment/status/?id=${merchantTransactionId}`,
+      redirectUrl: `https://projectsworkbboard.onrender.com/payment/status/?id=${merchantTransactionId}`,
       redirectMode: "POST",
       mobileNumber: req.body.number,
       paymentInstrument: {
@@ -90,10 +90,10 @@ const handleStatus = async (req, res) => {
     .request(options)
     .then(async (response) => {
       if (response.data.success === true) {
-        const url = `https://projectsworkboard.vercel.app/student`;
+        const url = `https://projectsworkbboard.onrender.com/student`;
         return res.redirect(url);
       } else {
-        const url = `https://projectsworkboard.vercel.app/`;
+        const url = `https://projectsworkbboard.onrender.com/`;
         return res.redirect(url);
       }
     })

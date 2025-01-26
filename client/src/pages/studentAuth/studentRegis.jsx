@@ -17,7 +17,7 @@ function StudentRegis() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "https://projects-work-board.vercel.app/auth/student/register",
+        "https://projectsworkbboard.onrender.com/auth/student/register",
         JSON.stringify(data),
         {
           headers: {

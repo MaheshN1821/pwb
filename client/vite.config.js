@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/socket.io": {
-        target: "https://projects-work-board.vercel.app",
+        target: "https://projectsworkbboard.onrender.com",
         changeOrigin: true,
         secure: false,
       },

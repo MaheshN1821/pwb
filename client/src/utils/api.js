@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://projects-work-board.vercel.app",
+  baseURL: "https://projectsworkbboard.onrender.com",
   withCredentials: true, // Allows cookies to be sent with the request
 });
 
@@ -29,7 +29,7 @@ api.interceptors.response.use(
         // Handle refresh failure (e.g., logout)
         console.log("Im in Api file because of error");
 
-        window.location.href = "https://projectsworkboard.vercel.app/"; // Redirect to login
+        window.location.href = "https://projectsworkbboard.onrender.com"; // Redirect to login
         return Promise.reject(refreshError);
       }
     }

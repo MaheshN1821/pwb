@@ -28,7 +28,7 @@ const corsOptions = {
   method: ["GET", "POST"],
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
-  origin: "https://projectsworkboard.vercel.app",
+  origin: "https://projectsworkbboard.onrender.com/",
   maxAge: 86400,
 };
 
@@ -64,7 +64,7 @@ const server = app.listen(PORT, () => {
 
 const io = new Server(server, {
   cors: {
-    origin: "https://projectsworkboard.vercel.app",
+    origin: "https://projectsworkbboard.onrender.com/",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
@@ -115,10 +115,10 @@ io.on("connection", (socket) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/dist")));
+  app.use(express.static(path.join(__dirname, "/client/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
   });
 }
 
